@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeployR activity</title>
+<style>:root{
+  --ink:#131a22; --muted:#5d6b7a; --faint:#8b97a4;
+  --paper:#f6f7f9; --card:#ffffff; --line:#d9dee5; --band:#eef1f5;
+  --sans:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"Cascadia Mono",Consolas,ui-monospace,"SF Mono",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;padding:32px 24px 64px;background:var(--paper);color:var(--ink);
+     font-family:var(--sans);font-size:14px;line-height:1.5;
+     -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto}
+header{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:28px}
+h1{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}
+.sub{margin-top:4px;color:var(--muted);font-family:var(--mono);font-size:12px}
+.totals{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);
+        border:1px solid var(--line);margin-bottom:34px}
+.tot{flex:1 1 150px;background:var(--card);padding:14px 16px}
+.tot .n{font-family:var(--mono);font-size:26px;font-weight:600;line-height:1.1;
+        display:block;font-variant-numeric:tabular-nums}
+.tot .k{display:block;margin-top:3px;font-size:11px;color:var(--muted);
+        text-transform:uppercase;letter-spacing:.07em}
+.trace-row{border-top:1px solid var(--line);padding:16px 0 10px}
+.trace-row:last-of-type{border-bottom:1px solid var(--line)}
+.thead{display:flex;align-items:baseline;justify-content:space-between;
+       gap:16px;margin-bottom:8px}
+.tname{font-size:13px;font-weight:600}
+.tnote{font-size:11px;color:var(--faint);font-weight:400;margin-left:8px}
+.tfig{font-family:var(--mono);font-size:13px;color:var(--muted);
+      font-variant-numeric:tabular-nums;white-space:nowrap}
+.tfig b{color:var(--ink);font-weight:600}
+.trace{display:block;width:100%;height:84px}
+.trace .axis{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
+.trace .wknd{fill:var(--band)}
+.xaxis{display:flex;margin-top:6px;font-family:var(--mono);font-size:10px;
+       color:var(--faint)}
+.xaxis span{flex:1 1 0;text-align:center;overflow:hidden;white-space:nowrap}
+footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);
+       color:var(--faint);font-size:11.5px;max-width:70ch}
+footer p{margin:0 0 6px}
+table{border-collapse:collapse;width:100%;margin-top:12px;font-family:var(--mono);
+      font-size:11.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:3px 8px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--muted);font-size:10.5px;text-transform:uppercase;
+   letter-spacing:.06em}
+tr.wknd td{background:var(--band)}
+details{margin-top:26px}
+summary{cursor:pointer;font-size:12px;color:var(--muted);padding:4px 0}
+summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+@media (max-width:640px){
+  body{padding:20px 14px 40px}
+  .tot .n{font-size:20px}
+  .trace{height:64px}
+  .xaxis{display:none}
+}
+@media print{
+  body{background:#fff;padding:0}
+  .trace-row{break-inside:avoid}
+}</style></head><body><div class="wrap">
+<header><h1>DeployR activity</h1>
+<div class="sub">2026-08-12 to 2026-09-10 &nbsp;&middot;&nbsp; 30 days &nbsp;&middot;&nbsp; generated 10 Sept 2026 11:50</div></header>
+<div class="totals">
+<div class="tot"><span class="n" style="color:#4a6076">26</span><span class="k">Started</span></div>
+<div class="tot"><span class="n" style="color:#2f7d5b">22</span><span class="k">Succeeded</span></div>
+<div class="tot"><span class="n" style="color:#b8412f">2</span><span class="k">Failed</span></div>
+<div class="tot"><span class="n" style="color:#3a6ea5">31</span><span class="k">AuthOk</span></div>
+<div class="tot"><span class="n" style="color:#b07d2b">2</span><span class="k">AuthFailed</span></div>
+</div>
+<div class="trace-row"><div class="thead">
+<div class="tname">Task sequences started<span class="tnote">Rebuild volume</span></div>
+<div class="tfig"><b>26</b> total &nbsp; peak <b>6</b>/day</div></div>
+<svg class="trace" viewBox="0 0 960 84" preserveAspectRatio="none" role="img" aria-label="Task sequences started, daily counts"><rect class="wknd" x="96" y="0" width="32" height="84"/><rect class="wknd" x="128" y="0" width="32" height="84"/><rect class="wknd" x="320" y="0" width="32" height="84"/><rect class="wknd" x="352" y="0" width="32" height="84"/><rect class="wknd" x="544" y="0" width="32" height="84"/><rect class="wknd" x="576" y="0" width="32" height="84"/><rect class="wknd" x="768" y="0" width="32" height="84"/><rect class="wknd" x="800" y="0" width="32" height="84"/><line class="axis" x1="0" y1="83" x2="960" y2="83"/><rect x="5.5" y="24.67" width="21" height="58.33" fill="#4a6076"/><rect x="37.5" y="71.33" width="21" height="11.67" fill="#4a6076"/><rect x="229.5" y="59.67" width="21" height="23.33" fill="#4a6076"/><rect x="261.5" y="48" width="21" height="35" fill="#4a6076"/><rect x="389.5" y="36.33" width="21" height="46.67" fill="#4a6076"/><rect x="421.5" y="59.67" width="21" height="23.33" fill="#4a6076"/><rect x="453.5" y="71.33" width="21" height="11.67" fill="#4a6076"/><rect x="517.5" y="13" width="21" height="70" fill="#4a6076"/><rect x="933.5" y="59.67" width="21" height="23.33" fill="#4a6076"/></svg>
+</div>
+<div class="trace-row"><div class="thead">
+<div class="tname">Ended successfully<span class="tnote">Completed rebuilds</span></div>
+<div class="tfig"><b>22</b> total &nbsp; peak <b>6</b>/day</div></div>
+<svg class="trace" viewBox="0 0 960 84" preserveAspectRatio="none" role="img" aria-label="Ended successfully, daily counts"><rect class="wknd" x="96" y="0" width="32" height="84"/><rect class="wknd" x="128" y="0" width="32" height="84"/><rect class="wknd" x="320" y="0" width="32" height="84"/><rect class="wknd" x="352" y="0" width="32" height="84"/><rect class="wknd" x="544" y="0" width="32" height="84"/><rect class="wknd" x="576" y="0" width="32" height="84"/><rect class="wknd" x="768" y="0" width="32" height="84"/><rect class="wknd" x="800" y="0" width="32" height="84"/><line class="axis" x1="0" y1="83" x2="960" y2="83"/><rect x="5.5" y="36.33" width="21" height="46.67" fill="#2f7d5b"/><rect x="37.5" y="71.33" width="21" height="11.67" fill="#2f7d5b"/><rect x="261.5" y="59.67" width="21" height="23.33" fill="#2f7d5b"/><rect x="389.5" y="36.33" width="21" height="46.67" fill="#2f7d5b"/><rect x="421.5" y="59.67" width="21" height="23.33" fill="#2f7d5b"/><rect x="453.5" y="71.33" width="21" height="11.67" fill="#2f7d5b"/><rect x="517.5" y="13" width="21" height="70" fill="#2f7d5b"/><rect x="933.5" y="59.67" width="21" height="23.33" fill="#2f7d5b"/></svg>
+</div>
+<div class="trace-row"><div class="thead">
+<div class="tname">Ended in failure<span class="tnote">Step or content failures</span></div>
+<div class="tfig"><b>2</b> total &nbsp; peak <b>1</b>/day</div></div>
+<svg class="trace" viewBox="0 0 960 84" preserveAspectRatio="none" role="img" aria-label="Ended in failure, daily counts"><rect class="wknd" x="96" y="0" width="32" height="84"/><rect class="wknd" x="128" y="0" width="32" height="84"/><rect class="wknd" x="320" y="0" width="32" height="84"/><rect class="wknd" x="352" y="0" width="32" height="84"/><rect class="wknd" x="544" y="0" width="32" height="84"/><rect class="wknd" x="576" y="0" width="32" height="84"/><rect class="wknd" x="768" y="0" width="32" height="84"/><rect class="wknd" x="800" y="0" width="32" height="84"/><line class="axis" x1="0" y1="83" x2="960" y2="83"/><rect x="5.5" y="13" width="21" height="70" fill="#b8412f"/><rect x="229.5" y="13" width="21" height="70" fill="#b8412f"/></svg>
+</div>
+<div class="trace-row"><div class="thead">
+<div class="tname">Passcode accepted<span class="tnote">Reached the sequence menu</span></div>
+<div class="tfig"><b>31</b> total &nbsp; peak <b>6</b>/day</div></div>
+<svg class="trace" viewBox="0 0 960 84" preserveAspectRatio="none" role="img" aria-label="Passcode accepted, daily counts"><rect class="wknd" x="96" y="0" width="32" height="84"/><rect class="wknd" x="128" y="0" width="32" height="84"/><rect class="wknd" x="320" y="0" width="32" height="84"/><rect class="wknd" x="352" y="0" width="32" height="84"/><rect class="wknd" x="544" y="0" width="32" height="84"/><rect class="wknd" x="576" y="0" width="32" height="84"/><rect class="wknd" x="768" y="0" width="32" height="84"/><rect class="wknd" x="800" y="0" width="32" height="84"/><line class="axis" x1="0" y1="83" x2="960" y2="83"/><rect x="5.5" y="24.67" width="21" height="58.33" fill="#3a6ea5"/><rect x="37.5" y="71.33" width="21" height="11.67" fill="#3a6ea5"/><rect x="69.5" y="59.67" width="21" height="23.33" fill="#3a6ea5"/><rect x="229.5" y="59.67" width="21" height="23.33" fill="#3a6ea5"/><rect x="261.5" y="36.33" width="21" height="46.67" fill="#3a6ea5"/><rect x="389.5" y="24.67" width="21" height="58.33" fill="#3a6ea5"/><rect x="421.5" y="59.67" width="21" height="23.33" fill="#3a6ea5"/><rect x="453.5" y="59.67" width="21" height="23.33" fill="#3a6ea5"/><rect x="517.5" y="13" width="21" height="70" fill="#3a6ea5"/><rect x="933.5" y="59.67" width="21" height="23.33" fill="#3a6ea5"/></svg>
+</div>
+<div class="trace-row"><div class="thead">
+<div class="tname">Passcode rejected<span class="tnote">Mistyped, or unexpected client</span></div>
+<div class="tfig"><b>2</b> total &nbsp; peak <b>1</b>/day</div></div>
+<svg class="trace" viewBox="0 0 960 84" preserveAspectRatio="none" role="img" aria-label="Passcode rejected, daily counts"><rect class="wknd" x="96" y="0" width="32" height="84"/><rect class="wknd" x="128" y="0" width="32" height="84"/><rect class="wknd" x="320" y="0" width="32" height="84"/><rect class="wknd" x="352" y="0" width="32" height="84"/><rect class="wknd" x="544" y="0" width="32" height="84"/><rect class="wknd" x="576" y="0" width="32" height="84"/><rect class="wknd" x="768" y="0" width="32" height="84"/><rect class="wknd" x="800" y="0" width="32" height="84"/><line class="axis" x1="0" y1="83" x2="960" y2="83"/><rect x="261.5" y="13" width="21" height="70" fill="#b07d2b"/><rect x="453.5" y="13" width="21" height="70" fill="#b07d2b"/></svg>
+</div>
+<div class="xaxis">
+<span>12 Aug</span><span></span><span></span><span>15 Aug</span><span></span><span></span><span>18 Aug</span><span></span><span></span><span>21 Aug</span><span></span><span></span><span>24 Aug</span><span></span><span></span><span>27 Aug</span><span></span><span></span><span>30 Aug</span><span></span><span></span><span>02 Sept</span><span></span><span></span><span>05 Sept</span><span></span><span></span><span>08 Sept</span><span></span><span></span></div>
+<details><summary>Show daily figures</summary><table><thead><tr><th>Date</th>
+<th>Started</th><th>Succeeded</th><th>Failed</th><th>AuthOk</th><th>AuthFailed</th></tr></thead><tbody>
+<tr><td>2026-09-10</td><td>2</td><td>2</td><td>0</td><td>2</td><td>0</td></tr>
+<tr><td>2026-09-09</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-09-08</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-09-07</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-09-06</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-09-05</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-09-04</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-09-03</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-09-02</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-09-01</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-31</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-08-30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-08-29</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-28</td><td>6</td><td>6</td><td>0</td><td>6</td><td>0</td></tr>
+<tr><td>2026-08-27</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-26</td><td>1</td><td>1</td><td>0</td><td>2</td><td>1</td></tr>
+<tr><td>2026-08-25</td><td>2</td><td>2</td><td>0</td><td>2</td><td>0</td></tr>
+<tr><td>2026-08-24</td><td>4</td><td>4</td><td>0</td><td>5</td><td>0</td></tr>
+<tr class="wknd"><td>2026-08-23</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-08-22</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-21</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-20</td><td>3</td><td>2</td><td>0</td><td>4</td><td>1</td></tr>
+<tr><td>2026-08-19</td><td>2</td><td>0</td><td>1</td><td>2</td><td>0</td></tr>
+<tr><td>2026-08-18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-17</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-08-16</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr class="wknd"><td>2026-08-15</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2026-08-14</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+<tr><td>2026-08-13</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>2026-08-12</td><td>5</td><td>4</td><td>1</td><td>5</td><td>0</td></tr>
+</tbody></table></details>
+<footer>
+<p>Starts will not reconcile exactly with successes plus failures. A sequence that is abandoned &mdash; machine powered off, reverted, or pulled mid-image &mdash; logs a start and no outcome, and a sequence running over midnight logs its start and its outcome on different days.</p>
+<p>Passcode acceptances normally exceed starts: an operator can reach the sequence menu and back out without deploying. A widening gap is worth a look.</p>
+<p>Shaded columns are weekends. Source: TwoPintSoftware-DeployR-Audit/Operational.</p>
+</footer></div></body></html>
+
