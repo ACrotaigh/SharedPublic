@@ -596,67 +596,6 @@ The `RunId` allows records from the same execution to be correlated.
 
 For longer retention and KQL-based searching, configure Azure Automation diagnostic settings to forward **Job Logs** and **Job Streams** to a Log Analytics workspace. Microsoft documents that these diagnostic categories can be used for historical analysis and alerting.
 
-## Configure a failed-job alert
-
-A failed-job alert is separate from the runbook schedule. The alert evaluates Azure Automation metrics; it does not execute the runbook.
-
-### Create the alert rule
-
-1. Open the Automation Account.
-2. Under **Monitoring**, select **Alerts**.
-3. Select **Create** > **Alert rule**.
-4. Confirm that the Automation Account is selected as the scope.
-5. Under **Condition**, select **Add condition**.
-6. Select the **Total Jobs** metric.
-7. Filter the metric using these dimensions:
-
-   ```text
-   Runbook Name = DeployR-Monitor-PS7
-   Status = Failed
-   ```
-
-8. Configure the threshold:
-
-   ```text
-   Aggregation: Total
-   Operator: Greater than
-   Threshold: 0
-   Evaluation frequency: 15 minutes
-   Lookback period: 1 hour
-   ```
-
-9. Under **Actions**, create or select an Action Group.
-10. Add an email notification to a monitored recipient or team address.
-11. Suggested rule name:
-
-    ```text
-    DeployR-Monitor-PS7 - Failed Job
-    ```
-
-12. Suggested severity:
-
-    ```text
-    Severity 2 - Warning
-    ```
-
-13. Enable automatic resolution and enable the rule when created.
-
-Azure Automation exposes the `Total Jobs` metric with `Runbook` and `Status` dimensions. Microsoft recommends filtering by the specific runbook and the `Failed` status to avoid alerts from unrelated or hidden runbooks.
-
-The evaluation frequency controls how often Azure Monitor checks the metric. It does **not** cause the runbook to execute every 15 minutes. Azure Monitor defines **Check every** as the alert evaluation frequency and **Lookback period** as the aggregation window.
-
-### Test the alert
-
-1. Ensure the alert rule and Action Group are enabled.
-2. Temporarily configure an invalid release JSON path.
-3. Start the published runbook.
-4. Confirm the job status becomes **Failed**.
-5. Confirm the alert appears under **Azure Monitor** > **Alerts**.
-6. Confirm the Action Group email arrives.
-7. Restore the valid JSON URI.
-8. Run the published runbook again and confirm successful completion.
-9. Verify that `DeployRLastDetectedVersion` was not changed by the failed test.
-
 ## Common failure scenarios
 
 ### `ErrorInvalidUser`
